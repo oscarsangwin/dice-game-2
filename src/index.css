@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Rubik, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 99%;
+  overflow: none;
+}
+#root {
+  height: 100%;
+  padding-bottom: 5px;
+  overflow: none;
+}
+main {
+  overflow: none;
+  max-width: 500px;
+  /* outline: 1px solid rgb(196, 196, 196); */
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  place-items: center;
+  height: 100%;
+}
+.max {
+  flex: 1;
+}
+.inner-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+}
+main > h2 {
+  text-align: center;
+}
+.input-page {
+  /* display: grid; */
+  /* grid-template-columns: 50% 50%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slider {
+  display: flex;
+  gap: 3px;
+  width: min-content;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+}
+.slider button, .reset-known {
+  font-size: 25px;
+  background-color: rgb(241, 241, 241);
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.slider input {
+  font-size: 25px;
+  border: none;
+  outline: none;
+  text-align: center;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+}
+.input-invalid, .input-invalid * {
+  background-color: rgb(255, 96, 96) !important;
+}
+.input-invalid input {
+  outline: 2px solid red;
+}
+.dice-selection {
+  grid-column: span 2;
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  margin: 5px auto;
+}
+.dice-selection button {
+  font-size: 55px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 9px;
+  height: 52px;
+  width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+.dice-selected {
+  outline: 3px solid rgb(255, 255, 255);
+  color: rgb(150, 194, 156) !important;
+  background-color: white !important;
+}
+.last-guess-outer {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+  background-color: rgb(150, 194, 156);
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.reset-known {
+  width: 155px;
+}
+.add-dice-box {
+  grid-column: span 2;
+}
+.add-dice-box button {
+  background-color: white;
+  color: rgb(150, 194, 156);
+}
+.no-last-dice {
+  filter: blur(2px) brightness(0.95);
+}
+.dice-at-least-one button {
+  background-color: rgb(150, 194, 156) !important;
+  color: white !important;
+}
+.dice-selection p {
+  text-align: center;
+  padding: 5px;
+  font-size: 25px;
+  color: rgb(182, 182, 182);
+}
+.dice-at-least-one p {
+  color: black;
+}
+.do-calc-btn {
+  grid-column: span 2;
+  background-color: rgb(150, 194, 156);
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: none;
+  padding: 15px;
+  width: 300px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 16px;
+  position: relative;
+}
+.do-calc-btn i {
+  font-size: 25px;
+}
+.output-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.output-page > h2 {
+  margin: 15px; 
+}
+.pc-cell {
+  height: 30px;
+  width: 50px;
+  padding: 5px;
+  text-align: right;
+  border-radius: 2px;
+}
+th {
+  font-size: 40px;
+  color: rgb(95, 143, 102);
+}
+.left-col {
+  text-align: center;
+  padding: 0 10px;
+}
+.last-dice-cell {
+  outline-offset: -2px;
+  outline: 2px solid black;
+  overflow: none;
+}
+.next-dice-cell {
+  outline-offset: -2px;
+  outline: 2px dashed black;
+  overflow: none;
+}
+.results-overview {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  /* place-items: center; */
+  gap: 10px;
+  max-width: 350px;
+  padding: 5px 20px;
+  width: 100%;
+  margin: 5px 0;
+}
+.error-text {
+  color: red;
+  font-size: 18px;
+}
+.tbl-no-data {
+  text-align: center;
+  color: grey;
+  font-weight: bold;
+  max-width: 200px;
+  text-wrap: wrap;
+}
+.prob-text-outer {
+  color: grey;
+  font-weight: lighter;
+}
+.results-overview h3 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.results-overview h4 {
+  font-size: 1.17em;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.guess-dice-icon {
+  font-size: 30px;
+  color: rgb(95, 143, 102);
+}
+.results-overview h4:nth-child(4) {
+  position: relative;
+}
+.results-overview h4:nth-child(4) p {
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  font-size: 10px;
+  font-weight: lighter;
+  color: rgb(161, 161, 161);
+}
+.do-calc-btn p {
+  position: absolute;
+  bottom: -5px;
+  transform: translateY(100%);
+  font-size: 10px;
+  font-weight: lighter;
+  color: rgb(161, 161, 161);
+  width: 400px;
+}
+.do-calc-btn p i {
+  font-size: 10px;
+  padding: 0 3px;
+}
