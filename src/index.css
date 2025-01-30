@@ -5,6 +5,9 @@
   font-family: Rubik, sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
+button {
+  color: black;
+}
 html, body {
   padding: 0;
   margin: 0;
